@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,18 +47,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogicLayer\GeneralOperations.cs" />
+    <Compile Include="DatabaseConnectionLayer\AccessProperty.cs" />
     <Compile Include="DatabaseConnectionLayer\DataAcess.cs" />
+    <Compile Include="DatabaseConnectionLayer\Operations.cs" />
+    <Compile Include="PresentationLayer\ComputerServicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ComputerServicing.Designer.cs">
+      <DependentUpon>ComputerServicing.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\HouseHoldService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\HouseHoldService.Designer.cs">
+      <DependentUpon>HouseHoldService.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MaidService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MaidService.Designer.cs">
+      <DependentUpon>MaidService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MobileServicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MobileServicing.Designer.cs">
+      <DependentUpon>MobileServicing.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Registration.cs">
       <SubType>Form</SubType>
@@ -67,11 +95,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PresentationLayer\ComputerServicing.resx">
+      <DependentUpon>ComputerServicing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\HouseHoldService.resx">
+      <DependentUpon>HouseHoldService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MaidService.resx">
+      <DependentUpon>MaidService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MobileServicing.resx">
+      <DependentUpon>MobileServicing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,7 +140,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BusinessLogicLayer\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clicklogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clicklogo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
