@@ -265,6 +265,7 @@ namespace ClickForService.PresentationLayer
             this.UsernameregistertextBox.Size = new System.Drawing.Size(334, 13);
             this.UsernameregistertextBox.TabIndex = 35;
             this.UsernameregistertextBox.TextChanged += new System.EventHandler(this.UsernameregistertextBox_TextChanged);
+            this.UsernameregistertextBox.Validating += new System.ComponentModel.CancelEventHandler(this.UsernameregistertextBox_Validating);
             // 
             // NameregistertextBox
             // 

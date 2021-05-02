@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -208,5 +209,22 @@ namespace ClickForService.PresentationLayer
         {
 
         }
+
+        private void UsernameregistertextBox_Validating(object sender, CancelEventArgs e)
+        {
+            UsernameValidation();
+        }
+        public void UsernameValidation()
+        {
+            Regex Username = new Regex("[a-z]{4,28}");
+            if (UsernameregistertextBox.Text.Length > 0)
+            {
+                if (!Username.IsMatch(UsernameregistertextBox.Text))
+                {
+                    MessageBox.Show("Invalid User Name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    UsernameregistertextBox.SelectAll();
+                }
+            }
+}
     }
 }

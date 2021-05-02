@@ -3,7 +3,9 @@ using ClickForService.DatabaseConnectionLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -99,9 +101,40 @@ namespace ClickForService.PresentationLayer
 
         private void buttonMaid_Click(object sender, EventArgs e)
         {
-            ServiceProviderProfile serviceProviderProfile = new ServiceProviderProfile(spUserName);
-            this.Hide();
-            serviceProviderProfile.Show();
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBconnection"].ConnectionString);
+
+            connection.Open();
+
+            string sql1 = "SELECT *FROM userpermissions WHERE userName= '" + Login.UserName + "'AND Block='" + "yes" + "'";
+            SqlCommand command = new SqlCommand(sql1, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+
+
+            if (reader.Read())
+            {
+                MessageBox.Show("You cannot do this Operation. Please Contact Support Center. ");
+
+                connection.Close();
+
+            }
+            else
+            {
+
+                ServiceProviderProfile serviceProviderProfile = new ServiceProviderProfile(spUserName);
+                this.Hide();
+                serviceProviderProfile.Show();
+                connection.Close();
+
+            }
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -73,6 +73,11 @@ namespace ClickForService.PresentationLayer
                         dfa.Show();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password...!!");
+                    connection.Close();
+                }
             }
 
             else
