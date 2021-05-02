@@ -217,6 +217,7 @@ namespace ClickForService.PresentationLayer
             this.CategoryregistercomboBox.Name = "CategoryregistercomboBox";
             this.CategoryregistercomboBox.Size = new System.Drawing.Size(313, 21);
             this.CategoryregistercomboBox.TabIndex = 109;
+            this.CategoryregistercomboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryregistercomboBox_SelectedIndexChanged);
             // 
             // label13
             // 
