@@ -137,7 +137,7 @@ namespace ClickForService.PresentationLayer
 
 
                         MessageBox.Show("Registration Sucessful....Please Login");
-                        Login login = new Login();
+                        DashboardforAdmin login = new DashboardforAdmin();
                         this.Hide();
                         login.Show();
 
