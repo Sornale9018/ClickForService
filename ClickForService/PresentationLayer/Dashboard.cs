@@ -75,9 +75,35 @@ namespace ClickForService.PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Profile pp = new Profile();
-            this.Hide();
-            pp.Show();
+            SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBconnection"].ConnectionString);
+
+            connection.Open();
+
+            string sql1 = "SELECT *FROM userpermissions WHERE userName= '" + Login.UserName + "'AND Block='" + "yes" + "'";
+            SqlCommand command = new SqlCommand(sql1, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+
+
+            if (reader.Read())
+            {
+                MessageBox.Show("You cannot do this Operation. Please Contact Support Center. ");
+
+                connection.Close();
+
+            }
+            else
+            {
+
+
+                Profile pp = new Profile();
+                this.Hide();
+                pp.Show();
+                connection.Close();
+
+            }
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
