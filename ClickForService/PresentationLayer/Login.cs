@@ -56,13 +56,13 @@ namespace ClickForService.PresentationLayer
                         this.Hide();
                         dashboard.Show();
                     }
-                    else if(Permission=="GU")
+                    else if (Permission == "GU")
                     {
 
                         AddServiceProviderDetails addServiceProviderDetails = new AddServiceProviderDetails(textBoxUsername.Text);
                         this.Hide();
                         addServiceProviderDetails.Show();
-       
+
 
                     }
 
@@ -72,6 +72,11 @@ namespace ClickForService.PresentationLayer
                         this.Hide();
                         dfa.Show();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password...!!");
+                    connection.Close();
                 }
             }
 

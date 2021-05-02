@@ -226,6 +226,7 @@ namespace ClickForService.PresentationLayer
             this.updatespdetailsbutton.TabIndex = 186;
             this.updatespdetailsbutton.Text = "Update Details";
             this.updatespdetailsbutton.UseVisualStyleBackColor = false;
+            this.updatespdetailsbutton.Click += new System.EventHandler(this.updatespdetailsbutton_Click);
             // 
             // button2
             // 
@@ -238,6 +239,7 @@ namespace ClickForService.PresentationLayer
             this.button2.TabIndex = 185;
             this.button2.Text = "Edit Profile";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // divisiontextBox
             // 

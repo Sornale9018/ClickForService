@@ -95,5 +95,10 @@ namespace ClickForService.PresentationLayer
              }
             connection.Close();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

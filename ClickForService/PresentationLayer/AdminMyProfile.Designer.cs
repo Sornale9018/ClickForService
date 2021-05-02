@@ -78,6 +78,7 @@ namespace ClickForService.PresentationLayer
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -132,11 +133,12 @@ namespace ClickForService.PresentationLayer
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label17.Location = new System.Drawing.Point(744, 604);
+            this.label17.Location = new System.Drawing.Point(744, 599);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 16);
             this.label17.TabIndex = 185;
             this.label17.Text = "EXIT";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // pictureBox16
             // 
@@ -594,11 +596,24 @@ namespace ClickForService.PresentationLayer
             this.textBox8.Size = new System.Drawing.Size(323, 13);
             this.textBox8.TabIndex = 196;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(599, 592);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 28);
+            this.button1.TabIndex = 197;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AdminMyProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
@@ -723,5 +738,6 @@ namespace ClickForService.PresentationLayer
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Button button1;
     }
 }
