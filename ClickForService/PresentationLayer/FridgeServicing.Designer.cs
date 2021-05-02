@@ -129,7 +129,7 @@ namespace ClickForService.PresentationLayer
             this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(58, 405);
+            this.buttonBack.Location = new System.Drawing.Point(48, 394);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(81, 33);
             this.buttonBack.TabIndex = 87;

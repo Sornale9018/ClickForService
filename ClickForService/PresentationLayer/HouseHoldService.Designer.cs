@@ -125,7 +125,7 @@ namespace ClickForService.PresentationLayer
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(636, 394);
+            this.button7.Location = new System.Drawing.Point(619, 458);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(108, 44);
             this.button7.TabIndex = 6;
@@ -169,7 +169,7 @@ namespace ClickForService.PresentationLayer
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
