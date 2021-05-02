@@ -61,7 +61,7 @@ namespace ClickForService.PresentationLayer
             if (reader.Read())
             {
 
-
+                connection.Close();
                 DataAcess ac = new DataAcess();
 
                 string sql = "SELECT *FROM Registrations WHERE City='" + textBoxCity.Text + "'AND gender='" + comboBox1.Text + "'AND Profession='" + PF + "'";
