@@ -226,5 +226,18 @@ namespace ClickForService.PresentationLayer
                 }
             }
 }
+
+        private void CategoryregistercomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CategoryregistercomboBox.Text == "Service Taker")
+            {
+                ProfessionregistercomboBox.Enabled = false;
+            }
+            else if(CategoryregistercomboBox.Text == "Click For Service Staff")
+            {
+                ProfessionregistercomboBox.Enabled = false;
+            }
+            else { ProfessionregistercomboBox.Enabled = true; }
+        }
     }
 }

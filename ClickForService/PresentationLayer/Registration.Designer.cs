@@ -481,6 +481,7 @@ namespace ClickForService.PresentationLayer
             this.CategoryregistercomboBox.Name = "CategoryregistercomboBox";
             this.CategoryregistercomboBox.Size = new System.Drawing.Size(241, 21);
             this.CategoryregistercomboBox.TabIndex = 55;
+            this.CategoryregistercomboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryregistercomboBox_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -541,6 +542,7 @@ namespace ClickForService.PresentationLayer
             this.ProfessionregistercomboBox.Name = "ProfessionregistercomboBox";
             this.ProfessionregistercomboBox.Size = new System.Drawing.Size(232, 21);
             this.ProfessionregistercomboBox.TabIndex = 60;
+            this.ProfessionregistercomboBox.SelectedIndexChanged += new System.EventHandler(this.ProfessionregistercomboBox_SelectedIndexChanged);
             // 
             // AddressregistertextBox
             // 

@@ -332,7 +332,7 @@ namespace ClickForService.PresentationLayer
 
         private void Registration_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Registration_FormClosing(object sender, FormClosingEventArgs e)
@@ -384,5 +384,18 @@ namespace ClickForService.PresentationLayer
             }
         }
 
+        private void ProfessionregistercomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CategoryregistercomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CategoryregistercomboBox.Text == "Service Taker")
+            {
+                ProfessionregistercomboBox.Enabled = false;
+            }
+            else { ProfessionregistercomboBox.Enabled = true; }
+        }
     }
 }
