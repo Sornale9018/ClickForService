@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace ClickForService.PresentationLayer
 {
@@ -365,5 +366,23 @@ namespace ClickForService.PresentationLayer
         {
             Application.Exit();
         }
+
+        private void UsernameregistertextBox_Validating(object sender, CancelEventArgs e)
+        {
+            UsernameValidation();
+        }
+        public void UsernameValidation()
+        {
+            Regex Username = new Regex("[a-z]{4,28}");
+            if (UsernameregistertextBox.Text.Length > 0)
+            {
+                if (!Username.IsMatch(UsernameregistertextBox.Text))
+                {
+                    MessageBox.Show("Invalid User Name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    UsernameregistertextBox.SelectAll();
+                }
+            }
+        }
+
     }
 }
