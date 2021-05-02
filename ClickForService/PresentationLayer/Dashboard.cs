@@ -20,7 +20,7 @@ namespace ClickForService.PresentationLayer
             InitializeComponent();
 
 
-            SendNotification.ABC();
+            //SendNotification.ABC();
         }
 
         
